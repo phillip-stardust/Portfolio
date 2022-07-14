@@ -167,13 +167,13 @@ void setup() {
   pinMode(PinEcho, INPUT);
   sensorDS18B20.begin();
   pinMode(relaylampara1, OUTPUT);
-  //connectToWiFi(); 
+  connectToWiFi(); 
 }
 
 void loop() {
-  //Sensordetemperatura(); 
+  Sensordetemperatura(); 
   Sensordeluz();
-  //Sensordeph();
-  //Sensornvlagua();
+  Sensordeph();
+  Sensornvlagua();
   delay(2000);
 }
