@@ -1,0 +1,9 @@
+.mb-3{
+    padding: 15px;
+}
+
+button.btn.btn-primary{
+   float: right;
+   margin-right: 10%;
+   background-color:  rgb(25, 184, 184);
+}

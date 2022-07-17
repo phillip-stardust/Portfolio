@@ -1,0 +1,6 @@
+<div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="{{switch.nombre}}" [checked]="checked" (change)="onChange()" [disabled]="modoManual? null : true">
+    <label class="custom-control-label" for="{{switch.nombre}}">{{switch.nombre}}</label>
+</div>
+<br>
+

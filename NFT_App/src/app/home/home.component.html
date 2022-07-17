@@ -1,0 +1,39 @@
+<div class="accordion" id="accordionExample">
+  <!--ACORDEON DE SISTEMA NFT-->
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
+          Sistema NFT <em class="fas fa-chevron-down"></em>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <app-parameter-group groupTitle="Sistema NFT" [elements]="sensors"></app-parameter-group>
+      </div>
+    </div>
+  </div>
+
+  <!--ACORDEON DE TAN DE NUTRIENTES-->
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+          aria-expanded="true" aria-controls="collapseOne">
+          Estados <em class="fas fa-chevron-down"></em>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="{{modoManual.nombre}}" [checked]="MMchecked" (change)="onChangeMM()">
+        <label class="custom-control-label" for="{{modoManual.nombre}}">{{modoManual.nombre}}</label>
+      </div>
+      <div class="card-body">
+        <app-parameter-group groupTitle="Estados" type="switchs" [elements]="switchs" [modoManual]="MMchecked"></app-parameter-group>
+      </div>
+    </div>
+  </div>
+</div>
