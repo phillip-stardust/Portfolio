@@ -1,0 +1,53 @@
+<div class="mx-3">
+    <h4>Programacion de NFT.</h4>
+    <br>
+    <form #configForm="ngForm" (ngSubmit)="saveConfig()">
+        <div>
+            <h5>Intervalo de tiempo de encendido de la bomba de agua:</h5>
+            <div class="mx-2">
+                <span class="ml-1">{{configModel.horasInter + " "}}</span>
+                <label for="horasIntervalo" class="form-label pull-right">Horas</label>
+                <input type="range" class="custom-range" min="0" max="23" name="horasIntervalo"
+                    [(ngModel)]="configModel.horasInter">
+            </div>
+            <br>
+            <div class="mx-2">
+                <span class="ml-1">{{configModel.minInter + " "}}</span>
+                <label for="minutosIntervalo" class="form-label pull-right">Minutos</label>
+                <input type="range" class="custom-range" min="0" max="59" name="minutosIntervalo"
+                    [(ngModel)]="configModel.minInter">
+            </div>
+        </div>
+
+        <div>
+            <h5>Tiempo de encendido de la bomba de agua:</h5>
+            <div class="mx-2">
+                <span class="ml-1">{{configModel.horasDur + " "}}</span>
+                <label for="horasDuracion" class="form-label pull-right">Horas</label>
+                <input type="range" class="custom-range" min="0" max="23" name="horasDuracion"
+                    [(ngModel)]="configModel.horasDur">
+            </div>
+            <br>
+            <div class="mx-2">
+                <span class="ml-1">{{configModel.minDur + " "}}</span>
+                <label for="minutosDuracion" class="form-label pull-right">Minutos</label>
+                <input type="range" class="custom-range" min="0" max="59" name="minutosDuracion"
+                    [(ngModel)]="configModel.minDur">
+            </div>
+            <button class="btn btn-primary" type="submit">Guardar configuración</button>
+        </div>
+    </form>
+</div>
+<!-- Modal -->
+<ng-template #savedModal let-modal>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                   {{ info }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" (click)="modal.close()">Cerrar</button>
+                </div>
+            </div>
+        </div>
+</ng-template>

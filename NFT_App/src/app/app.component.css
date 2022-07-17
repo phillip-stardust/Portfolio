@@ -1,0 +1,22 @@
+.top-container {
+    position: relative;
+    background: rgb(25, 184, 184);
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .top-container.float-style>a {
+    display: inline;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .top-container.float-style>button{
+    float: right;
+    line-height:10px; 
+    color: chartreuse;
+    
+  } 
+  
+ 
